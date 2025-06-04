@@ -3,8 +3,11 @@ import { BsPlusLg } from "react-icons/bs";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import { setCloseTerminialAction } from "../app/features/fileTreeSlice";
 
 const Terminal = () => {
+  const dispatch =useDispatch()
         const [activeIndex, setActiveIndex] = useState<number | null>(null);
         const liItems = [
         "OUTPUT",
@@ -17,9 +20,12 @@ const Terminal = () => {
        const handleClick = (index: number) => {
         setActiveIndex(index); // Set the clicked li's index as active
     };
+    const handleCloseTerminial = () => {
+      dispatch(setCloseTerminialAction(false))
+    }
   return (
     <div>
-                <ul className="font-semibold flex justify-between  mt-2 ml-2 cursor-pointer">
+            <ul className="font-semibold flex justify-between  mt-2 ml-2 cursor-pointer">
                     <div className="flex gap-3">
             <div className="flex justify-center items-center gap-2">
                 <li>PROBLEMS</li>
@@ -41,7 +47,9 @@ const Terminal = () => {
 <BsPlusLg />
 <MdKeyboardArrowDown />
 <HiOutlineDotsHorizontal />
-<IoClose />
+<span onClick={handleCloseTerminial}>
+  <IoClose />
+</span>
 </div>
         </ul>
     <div className="p-2 text-[#CCCCCC] h-full overflow-auto mt-[40px]">
