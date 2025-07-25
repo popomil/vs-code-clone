@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# VS Code Clone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight VS Code clone built with React, TypeScript, and Vite. This project mimics some of the core features of Visual Studio Code with a modern UI and responsive design.
 
-Currently, two official plugins are available:
+![VS Code Clone Screenshot](https://github.com/popomil/vs-code-clone/raw/main/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- File explorer panel
+- Resizable panels (using react-resizable-panels)
+- Syntax highlighting (react-syntax-highlighter)
+- Tabbed interface
+- Redux state management
+- Toast notifications (react-hot-toast)
+- VS Code-like icons (react-icons)
+- Tailwind CSS for styling
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React 18
+- TypeScript
+- Vite
+- Redux Toolkit
+- Tailwind CSS
+- React Icons
+- React Syntax Highlighter
+- React Resizable Panels
+- UUID for unique IDs
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/popomil/vs-code-clone.git
+   cd vs-code-clone
